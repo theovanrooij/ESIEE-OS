@@ -2,6 +2,7 @@
 #include <sys/wait.h>
 #include <sys/types.h> 
 #include "exo1.h"
+#include <errno.h> 
 
 int main(int argc, char *argv[]){
     pid_t fils_pid = fork();

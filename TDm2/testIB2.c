@@ -1,5 +1,6 @@
 #include <unistd.h> 
 #include <sys/types.h> 
+#include <errno.h> 
 #include "exo1.h"
 
 int main(int argc, char *argv[]){

@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/wait.h>
+#include <fcntl.h>
 #include "exo1.h"
 #include "../TDm1/gestionFichiers.h"
 #include <errno.h>  
@@ -25,19 +26,8 @@ int main (int argc, char *argv[]) {
         return 0;
     }
 
-    if(fils_pid ==0){
-
         ligne = litLigne(descripteurFichier);
         writeLine(1,ligne);
         close(descripteurFichier);
-
-    } else if (fils_pid > 0) {
-        wait(NULL);
-        ligne = litLigne(descripteurFichier);
-        writeLine(1,"Papa : \n");
-        writeLine(1,ligne);
-        close(descripteurFichier);
-        
-    }
     return 0;
 }
