@@ -10,8 +10,8 @@ int main(int argc, char *argv[]){
         afficheCourant("fils");
         affichePere("Vérification que le pid du père dans le fork est bien le meme que le courant avant fork.");
     } else if (fils_pid > 0) {
-        afficheCourant("père");
         wait(NULL); // Ajout wait
+        afficheCourant("père");
     } else {
         perror("Fork n'a pas fonctionné");
     }
